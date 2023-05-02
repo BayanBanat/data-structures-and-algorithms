@@ -1,9 +1,9 @@
 # data-structures-and-algorithms
 
-| # | Column 2 |
+| # | Topic |
 | - | -------- |
-| 1 | Column 2 |
-| 2 | Column 2 |
-| 3 | Column 2 |
-| 4 | Column 2 |
-| 5 | Column 2 |
+| 1 |[code_1](Python/code_challenge1.md) |
+| 2 | code_2 |
+| 3 | code_3 |
+| 4 | code_4 |
+| 5 | code_5 |
