@@ -1,3 +1,4 @@
+
 # Code Challenge: Class 05: Linked List Implementation
 
 ![img5](../code_challenge05/nodes.png)
@@ -23,3 +24,5 @@ if __name__ == "__main__":
     print(node2.insert("node3"))
     print(node2.includes("node1"))
 ```
+
+
