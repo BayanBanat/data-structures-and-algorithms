@@ -6,4 +6,4 @@
 | 2 |[code_2](Python/code_challenge2/code_challenge2.md) |
 | 3 |[code_3](Python/code_challenge3/code_challenge3.md) |
 | 4 | code_4 |
-| 5 | code_5 |
+| 5 | [code_5](Python/code_challenge05/code_challenge05.md) |
