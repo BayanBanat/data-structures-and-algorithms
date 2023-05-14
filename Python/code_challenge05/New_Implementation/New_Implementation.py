@@ -28,3 +28,14 @@ class LinkedList:
             current = current.next
         New_string += "None"
         return New_string
+    
+ 
+
+if __name__ == "__main__":
+    node1=Node("node1")
+    print(node1)
+    node2=LinkedList("node2")
+    node2.insert("node1")
+    print(node2.insert("node3"))
+    print(node2.includes("node1"))
+   
