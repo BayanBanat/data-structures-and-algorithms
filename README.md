@@ -7,3 +7,4 @@
 | 3 |[code_3](Python/code_challenge3/code_challenge3.md) |
 | 4 | code_4 |
 | 5 | [code_5](Python/code_challenge05/code_challenge05.md) |
+| 6 | [code_5](Python/code_challenge05/code_challenge05.md) |
