@@ -53,6 +53,71 @@ def test_All_The_Values(linked_list):
     expect = "a -> b -> c -> None"
     assert act == expect
 
+def test_Add_Node_At_End(linked_list):
+    linked_list.insert("node1")
+    linked_list.insert("node2")
+    linked_list.insert("node3")
+    linked_list.append("node4")
+    new_string="node3 -> node2 -> node1 -> node4 -> None"
+    assert linked_list.ToString()==new_string
+
+def test_Add_Multi_Node_At_End(linked_list):
+    linked_list.insert("node1")
+    linked_list.insert("node2")
+    linked_list.insert("node3")
+    linked_list.append("node4")
+    linked_list.append("node5")
+    new_string="node3 -> node2 -> node1 -> node4 -> node5 -> None"
+    assert linked_list.ToString()==new_string
+
+def test_Insert_Before(linked_list):
+    linked_list.insert("node1")
+    linked_list.insert("node2")
+    linked_list.insert("node3")
+    linked_list.insert_before("node2","node4")
+    new_string="node3 -> node4 -> node2 -> node1 -> None"
+    assert linked_list.ToString()==new_string
+
+def test_Insert_Before_First_Node(linked_list):
+    linked_list.insert("node1")
+    linked_list.insert("node2")
+    linked_list.insert("node3")
+    linked_list.insert_before("node3","node4")
+    new_string="node4 -> node3 -> node2 -> node1 -> None"
+    assert linked_list.ToString()==new_string
+ 
+def test_Insert_Before_Value_If_Does_Not_Exist(linked_list):
+    linked_list.insert("node1")
+    linked_list.insert("node2")
+    linked_list.insert("node3")
+    linked_list.insert_before("node6","node4")
+    new_string="node3 -> node2 -> node1 -> None"
+    assert linked_list.ToString()==new_string
+
+
+def test_Insert_After_Value(linked_list):
+    linked_list.insert("node1")
+    linked_list.insert("node2")
+    linked_list.insert("node3")
+    linked_list.Insert_After("node2","node4")
+    new_string="node3 -> node2 -> node4 -> node1 -> None"
+    assert linked_list.ToString()==new_string
+
+def test_Insert_After_The_End_Value(linked_list):
+    linked_list.insert(1)
+    linked_list.insert(2)
+    linked_list.insert(3)
+    linked_list.Insert_After(1,4)
+    new_string="3 -> 2 -> 1 -> 4 -> None"
+    assert linked_list.ToString()==new_string
+
+def test_Insert_After_Value_If_Does_Not_Exist(linked_list):
+    linked_list.insert("node1")
+    linked_list.insert("node2")
+    linked_list.insert("node3")
+    linked_list.Insert_After("node6","node4")
+    new_string="node3 -> node2 -> node1 -> None"
+    assert linked_list.ToString()==new_string
 
 @pytest.fixture
 def linked_list():
