@@ -4,6 +4,7 @@
 ![img5_1](../code_challenge05/image/append.png)
 ![img5_2](../code_challenge05/image/insert_before.png)
 ![img5_3](../code_challenge05/image/insert_after.png)
+![img5_4](../code_challenge05/image/linked_list_kth.png)
 
 
 
@@ -18,7 +19,7 @@
 
 **insert_before and Insert_After** methods is O(n), where n is the number of nodes in the linked list. This is because in the worst case, the methods have to traverse the entire linked list to find the node with the specified value, so the time it takes to execute grows linearly with the size of the input. The space complexity is also O(1) since only one new node is created.
 
-
+**linked_list_kth** methods is O(n^2), where n is the number of nodes in the linked list, the methods have to traverse the entire linked list to find the node with the specified value, and isert the value in the first index of the normal_list. The space complexity is also O(n) since new list is created.
 
 # Solution
 python Python/code_challenge05/New_Implementation/New_Implementation.py
@@ -32,10 +33,13 @@ if __name__ == "__main__":
     LinkedList1=LinkedList(node2)
     print(LinkedList1.head.value)
     LinkedList1.insert("node")
+    LinkedList1.insert("node1")
+    LinkedList1.insert("node2")
     LinkedList1.ToString()
     LinkedList1.includes("node3")
     node3=LinkedList()
     print(node3.append("node4"))
     print(node3.insert_before("node2","node4"))
+    print(LinkedList1.linked_list_kth(1))
 ```
 

@@ -73,8 +73,27 @@ class LinkedList:
             return
         current = current.next
 
+
+# head -> {1} -> {3} -> {8} -> {2} -> X	0	2
+    def linked_list_kth(self,k):
+       current=self.head
+       normal_list=[]
+       while current:
+          normal_list.insert(0, current.value)
+          current=current.next
+       if k>=len(normal_list):
+          raise ValueError("Invalid value of k")
+       return normal_list[k]
+       
+             
+
+
         
-# head -> {1} -> {2} -> {2} -> X	2, 5	head -> {1} -> {2} -> {5} -> {2} -> X
+
+
+
+   
+   
 
 
 
@@ -98,10 +117,14 @@ if __name__ == "__main__":
     LinkedList1=LinkedList(node2)
     print(LinkedList1.head.value)
     LinkedList1.insert("node")
+    LinkedList1.insert("node1")
+    LinkedList1.insert("node2")
     LinkedList1.ToString()
     LinkedList1.includes("node3")
     node3=LinkedList()
     print(node3.append("node4"))
     print(node3.insert_before("node2","node4"))
+    print(LinkedList1.linked_list_kth(1))
+    
 
     
