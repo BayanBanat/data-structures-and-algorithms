@@ -81,7 +81,7 @@ class LinkedList:
        while current:
           normal_list.insert(0, current.value)
           current=current.next
-       if k>=len(normal_list):
+       if k>=len(normal_list) or k<-len(normal_list):
           raise ValueError("Invalid value of k")
        return normal_list[k]
        
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     node3=LinkedList()
     print(node3.append("node4"))
     print(node3.insert_before("node2","node4"))
-    print(LinkedList1.linked_list_kth(1))
+    print(LinkedList1.linked_list_kth(6))
     
 
     

@@ -43,3 +43,10 @@ if __name__ == "__main__":
     print(LinkedList1.linked_list_kth(1))
 ```
 
+
+
+
+
+
+
+
