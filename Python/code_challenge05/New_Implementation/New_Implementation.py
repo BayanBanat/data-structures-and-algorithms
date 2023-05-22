@@ -84,6 +84,37 @@ class LinkedList:
        if k>=len(normal_list) or k<-len(normal_list):
           raise ValueError("Invalid value of k")
        return normal_list[k]
+    
+    
+# {1} -> {3} -> {2} -> null	{5} -> {9} -> {4} -> null	{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> null
+# {1} -> {3} -> null	{5} -> {9} -> {4} -> null	{1} -> {5} -> {3} -> {9} -> {4} -> null
+    def linked_list_zip(self,LL1=None, LL2=None):
+        merged_list=[]
+
+        pointer1 = LL1.head
+        pointer2 = LL2.head
+
+        while  pointer1 and  pointer2:
+            merged_list.append( pointer1.value)
+            merged_list.append( pointer2.value)
+            pointer1= pointer1.next
+            pointer2= pointer2.next
+
+        if pointer1 is not None:
+           merged_list.append(pointer1.value)
+
+        if pointer2 is not None:
+           merged_list.append(pointer2.value)
+           
+        if LL1.head is None :
+           return LL2
+        if LL2.head is None :
+           return LL1
+        
+               
+        merged_list.append(None)
+        return merged_list
+    
        
              
 
@@ -110,21 +141,31 @@ class LinkedList:
 
 
 if __name__ == "__main__":
-    node1=Node("node1")
-    print(node1.value)
-    node2=Node("node2",node1)
-    print(node2.value)
-    LinkedList1=LinkedList(node2)
-    print(LinkedList1.head.value)
-    LinkedList1.insert("node")
-    LinkedList1.insert("node1")
-    LinkedList1.insert("node2")
-    LinkedList1.ToString()
-    LinkedList1.includes("node3")
-    node3=LinkedList()
-    print(node3.append("node4"))
-    print(node3.insert_before("node2","node4"))
-    print(LinkedList1.linked_list_kth(6))
+    # node1=Node("node1")
+    # print(node1.value)
+    # node2=Node("node2",node1)
+    # print(node2.value)
+    # LinkedList1=LinkedList(node2)
+    # print(LinkedList1.head.value)
+    # LinkedList1.insert("node")
+    # LinkedList1.insert("node1")
+    # LinkedList1.insert("node2")
+    # LinkedList1.ToString()
+    # LinkedList1.includes("node3")
+    # node3=LinkedList()
+    # print(node3.append("node4"))
+    # print(node3.insert_before("node2","node4"))
+    # print(LinkedList1.linked_list_kth(6))
+
+    node1=LinkedList("node1")
+    node1.insert("node2")
+    node1.insert("node3")
     
+    node2=LinkedList("node22")
+    node2.insert("node33")
+    node2.insert("node44")
+
+    zip=node2.linked_list_zip("{1} -> {3} -> {2} -> null","{5} -> {9} -> {4} -> null")
+    print(zip)
 
     
