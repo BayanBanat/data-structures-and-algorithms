@@ -1,7 +1,8 @@
 # Code Challenge:class 08
 
 
-![img5_5](../code_challenge05/image/linked_list_zip.png)
+![img5_5-1](../code_challenge08/img/linked_list_zip1.png)
+![img5_5-2](../code_challenge08/img/linked_list_zip2.png)
 
 # Approach & Efficiency
 

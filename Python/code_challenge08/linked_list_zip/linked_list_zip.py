@@ -89,6 +89,17 @@ class LinkedList:
 # {1} -> {3} -> {2} -> null	{5} -> {9} -> {4} -> null	{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> null
 # {1} -> {3} -> null	{5} -> {9} -> {4} -> null	{1} -> {5} -> {3} -> {9} -> {4} -> null
 def linked_list_zip(LL1=None, LL2=None):
+    '''
+    """
+        Zips two linked lists together by alternating nodes from each list.
+
+        Args:
+            LL1 (LinkedList, optional): The first linked list. Defaults to None.
+            LL2 (LinkedList, optional): The second linked list. Defaults to None.
+
+        Returns:
+            LinkedList: The merged linked list with nodes alternated from LL1 and LL2.
+    '''
     merged_list = LinkedList()
 
     pointer1 = LL1.head
