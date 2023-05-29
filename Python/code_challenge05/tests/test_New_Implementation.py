@@ -151,7 +151,61 @@ def test_linked_list_kth_Middle(linked_list):
     linked_list.insert("node3")
     assert linked_list.linked_list_kth(1) == "node2"
 
+def test_linked_list_zip(linked_list,linked_list2):
+    linked_list.insert("2")
+    linked_list.insert("3")
+    linked_list.insert("1")
+    linked_list2.insert("4")
+    linked_list2.insert("9")
+    linked_list2.insert("5")
+
+    assert linked_list.linked_list_zip(linked_list,linked_list2) == ["1","5","3","9","2","4",None]
+
+
+def test_linked_list_zip_different_length1(linked_list,linked_list2):
+    linked_list.insert("3")
+    linked_list.insert("1")
+    linked_list2.insert("4")
+    linked_list2.insert("9")
+    linked_list2.insert("5")
+
+    assert linked_list.linked_list_zip(linked_list,linked_list2) == ["1","5","3","9","4",None]
+
+
+def test_linked_list_zip_different_length2(linked_list,linked_list2):
+    linked_list.insert("2")
+    linked_list.insert("3")
+    linked_list.insert("1")
+    linked_list2.insert("9")
+    linked_list2.insert("5")
+
+    assert linked_list.linked_list_zip(linked_list,linked_list2) == ["1","5","3","9","2",None]
+
+
+def test_linked_list_zip_one_empyt1(linked_list,linked_list2):
+    linked_list.insert("2")
+    linked_list.insert("3")
+    linked_list.insert("1")
+
+    assert linked_list.linked_list_zip(linked_list,linked_list2) == linked_list
+
+
+def test_linked_list_zip_one_empyt2(linked_list,linked_list2):
+    linked_list2.insert("4")
+    linked_list2.insert("5")
+    linked_list2.insert("6")
+
+    assert linked_list.linked_list_zip(linked_list,linked_list2) == linked_list2
+
+
+
+
+
 
 @pytest.fixture
 def linked_list():
+    return LinkedList()
+
+@pytest.fixture
+def linked_list2():
     return LinkedList()

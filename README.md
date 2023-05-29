@@ -8,3 +8,5 @@
 | 4 | code_4 |
 | 5 | [code_5](Python/code_challenge05/code_challenge05.md) |
 | 6 | [code_5](Python/code_challenge05/code_challenge05.md) |
+| 8 | [code_8](Python/code_challenge08/code-challenge08.md) |
+| 10 | [code_10](Python/code_challenge10/stack-and-queue.md) |
