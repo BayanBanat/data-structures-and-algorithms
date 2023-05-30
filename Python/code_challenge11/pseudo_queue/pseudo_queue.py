@@ -23,7 +23,7 @@ class Stack:
             self.top=temp.next
             temp.next=None
             return temp.value
-        except AttributeError:
+        except:
             print("Stack is empty!")
 
     
@@ -33,7 +33,7 @@ class Stack:
        try:
            return self.top.value
        
-       except AttributeError:
+       except:
             print("Stack is empty!")
 
     def is_empty(self):
