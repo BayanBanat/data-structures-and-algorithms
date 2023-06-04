@@ -11,11 +11,9 @@
 
 ## Approach & Efficiency
 
-**enqueue** method has a time complexity of O(1) because it only appends an animal to the end of a list.
-The space complixcity is O(1) because it does not depend on the number of animals already in the shelter.
+**enqueue** method has a constant **time complexity and space complexity** O(1) because it depend on the dequeue in queue class which has a constant **time complexity and space complexity** O(1) .
 
-**dequeue** method can be considered O(n), where n is the number of animals in the list.
-The space complixcity is O(n), because all the animals after the removed animal need to be shifted to fill the empty space.
+**dequeue** method has a constant **time complexity and space complexity** O(1) beecause it depend on the enqueue in queue class which has a constant **time complexity and space complexity** O(1) .
 
 ## Solution
 python Python/code_challenge12/stack_queue_animal_shelter/stack_queue_animal_shelter.py
@@ -25,15 +23,17 @@ if __name__ == "__main__":
     shelter = AnimalShelter()
     cat1=Animal("cat","LoLo")
     shelter.enqueue(cat1)
-    dog1=Animal("dog","zoro")
+    dog1=Animal("dog","zorro")
     shelter.enqueue(dog1)
-    cat2=Animal("cat","losy")
+    cat2=Animal("cat","lossy")
     shelter.enqueue(cat2)
     dog2=Animal("dog","bogy")
     shelter.enqueue(dog2)
-    shelter.print_animals()
     print("///////////////////////////")
-    shelter.dequeue("cat")
-    shelter.dequeue("cat")
-    shelter.print_animals()
+    pref = "cat"
+    dequeued_animal = shelter.dequeue(pref)
+    print(dequeued_animal.name)
+    pref = "dog"
+    dequeued_animal = shelter.dequeue(pref)
+    print(dequeued_animal.name)
 ```
