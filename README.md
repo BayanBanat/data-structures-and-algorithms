@@ -11,3 +11,5 @@
 | 8 | [code_8](Python/code_challenge08/code-challenge08.md) |
 | 10 | [code_10](Python/code_challenge10/stack-and-queue.md) |
 | 11 | [code_11](Python/code_challenge11/code_challenge11.md) |
+| 12 | [code_12](Python/code_challenge12/code_challenge12.md) |
+| 13 | [code_13](Python/code_challenge13/code_challenge13.md) |
