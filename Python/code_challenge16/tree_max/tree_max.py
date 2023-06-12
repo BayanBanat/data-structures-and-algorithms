@@ -29,8 +29,6 @@ class BTree:
         _helper_in_order(self.root)
         return output
 
-class BStTree(BTree):
-
     def tree_max(self):
        """
         This method performs an in-order traversal of the binary tree and finds the maximum value among all the nodes.
@@ -41,6 +39,8 @@ class BStTree(BTree):
         Returns:
         int: The maximum value in the binary tree.
        """
+       if self.root == None:
+           return None
        values = self.in_order()
        max_value = 0
        for i in values:
@@ -50,7 +50,7 @@ class BStTree(BTree):
                
 
 if __name__ == "__main__":
-    binary_tree=BStTree()
+    binary_tree=BTree()
     binary_tree.root=TNode(2)
     binary_tree.root.left=TNode(7)
     binary_tree.root.right=TNode(5)
