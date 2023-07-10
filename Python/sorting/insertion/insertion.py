@@ -1,13 +1,9 @@
 def insert(sorted, value):
     i = 0
-    while value > sorted[i]:
+    while i < len(sorted) and value > sorted[i]:
         i += 1
-    while i < len(sorted):
-        temp = sorted[i]
-        sorted[i] = value
-        value = temp
-        i += 1
-    sorted.append(value)
+    sorted.insert(i, value)
+
 
 def insertion_sort(input):
     sorted = [input[0]]
