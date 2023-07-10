@@ -15,3 +15,4 @@
 | 13 | [code_13](Python/code_challenge13/code_challenge13.md) |
 | 15 | [code_15](Python/code_challenge15/code_challenge15.md) |
 | 16 | [code_16](Python/code_challenge16/code_challenge16.md) |
+| 26 | [code_26](Python/sorting/insertion/README.md) |
