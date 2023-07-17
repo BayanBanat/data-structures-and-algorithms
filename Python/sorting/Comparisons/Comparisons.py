@@ -27,3 +27,22 @@ def stripLeadingArticle(title):
 def sortByTitle(movies):
     return sorted(movies, key=lambda movie: stripLeadingArticle(movie['title']))
 
+
+movies = [
+    { 'title': 'The Dark Knight', 'year': 2008, 'genres': ['Action', 'Drama'] },
+    { 'title': 'Pulp Fiction', 'year': 1994, 'genres': ['Crime', 'Drama'] },
+    { 'title': 'The Shawshank Redemption', 'year': 1994, 'genres': ['Drama'] },
+    { 'title': 'Inception', 'year': 2010, 'genres': ['Action', 'Adventure', 'Sci-Fi'] }
+]
+
+sortedByYear = sortByYear(movies)
+print("Sorted by Year:")
+for movie in sortedByYear:
+    print(f"{movie['title']} ({movie['year']})")
+
+
+sortedByTitle = sortByTitle(movies)
+print("\nSorted by Title:")
+for movie in sortedByTitle:
+    print(movie['title'])
+
