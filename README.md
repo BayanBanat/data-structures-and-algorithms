@@ -17,3 +17,4 @@
 | 16 | [code_16](Python/code_challenge16/code_challenge16.md) |
 | 26 | [code_26](Python/sorting/insertion/README.md) |
 | 27 | [code_27](Python/sorting/merge/README.md) |
+| 31 | [code_31](Python/code_challenge31/README.md) |
