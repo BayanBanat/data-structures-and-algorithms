@@ -1,41 +1,13 @@
-# Merge Sort
-**Merge Sort is a sorting algorithm that follows the divide-and-conquer approach. It recursively divides the array into smaller subarrays until each subarray contains only one element. Then, it merges the sorted subarrays by comparing and combining elements from the left and right halves of each subarray. This process continues until the entire array is sorted, resulting in a sorted sequence.**
+# Comparisons
+**The comparator function takes a and b, and returns a number less than zero if a should come before b when sorting is completed. There are two approaches for numbers to implement such a function. The first uses the < operator, and by convention returns -1 if a < b. If a > b, it returns 1, and if a == b, it returns 0. While the contract of the comparator function says any number is a valid return so long as the less-than-0 rule holds, by convention we return -1, 0, or 1.**
 
 Pseudocode
 ```
-ALGORITHM Mergesort(arr)
-    DECLARE n <-- arr.length
-
-    if n > 1
-      DECLARE mid <-- n/2
-      DECLARE left <-- arr[0...mid]
-      DECLARE right <-- arr[mid...n]
-      // sort the left side
-      Mergesort(left)
-      // sort the right side
-      Mergesort(right)
-      // merge the sorted left and right sides together
-      Merge(left, right, arr)
-
-ALGORITHM Merge(left, right, arr)
-    DECLARE i <-- 0
-    DECLARE j <-- 0
-    DECLARE k <-- 0
-
-    while i < left.length && j < right.length
-        if left[i] <= right[j]
-            arr[k] <-- left[i]
-            i <-- i + 1
-        else
-            arr[k] <-- right[j]
-            j <-- j + 1
-
-        k <-- k + 1
-
-    if i = left.length
-       set remaining entries in arr to remaining values in right
-    else
-       set remaining entries in arr to remaining values in left
+function compareNumbers(a, b) {
+  if (a == b) return 0;
+  if (a < b) return -1;
+  if (a > b) return 1;
+}
 ```
 **Trace**
 **Sample Array: [8, 4, 23, 42, 16, 15]**
