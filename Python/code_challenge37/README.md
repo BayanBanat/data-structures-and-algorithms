@@ -4,6 +4,7 @@
 ## Whiteboard Process
 ![img1](./graph2.jpg)
 
+
 ## Approach & Efficiency
 
 **business_trip :** 
