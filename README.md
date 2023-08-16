@@ -22,4 +22,6 @@
 | 30 | [code_30](Python/code_challenge30/code_challenge30.md) |
 | 32 | [code_32](Python/code_challenge32/README.md) |
 | 33 | [code_33](Python/code_challenge33/README.md) |
+| 37 | [code_37](Python/code_challenge37/README.md) |
+| 38 | [code_38](Python/code_challenge38/README.md) |
 
